@@ -2,6 +2,17 @@ const express = require("express"); // import express from express
 const app = express(); // gọi hàm -> tạo ra 1 app mới với cổng 3000
 const port = 3001; // port 3001
 
+// sử dụng pug làm view engine
+app.set("views", "./views");
+// import pug
+app.set("view engine", "pug");
+
+// render ra file index.pug trong thư mục views
+app.get("/test", (req, res) => {
+    res.render('index.pug', { title: 'Trang HelloWorld', message: 'Hello World' });
+});
+
+
 // tạo router với "/" <-> localhost:3001/
 app.get("/", (req, res) => {
     res.send(`

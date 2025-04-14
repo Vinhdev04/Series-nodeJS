@@ -46,4 +46,9 @@
 - <i>`Handlebars`</i>
 - <b>Sử dụng `PUG`</b>
 - <i>Cài đặt: `npm install pug`</i>
-- <i>Tài liệu: `[npm install pug](https://pugjs.org/api/getting-started.html)`</i>
+- <i>Tài liệu: `[npm install pug](https://pugjs.org/api/getting-started.html)`</i> <br>
+` // sử dụng pug làm view engine`
+` app.set("views", "./views");`<br>
+` // import pug`
+` app.set("view engine", "pug");`
+---
