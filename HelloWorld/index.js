@@ -15,10 +15,10 @@ app.get("/test", (req, res) => {
 
 // tạo router với "/" <-> localhost:3001/
 app.get("/", (req, res) => {
-    res.send(`
-    <h1>Trang chủ</h1>
-    &lt;h1&gt;Trang chủ&lt;/h1&gt;
-    `); // phản hồi
+    res.render("index.pug", {
+        title: "Trang Chủ",
+        message: "Xin chào các bạn"
+    });
 });
 
 app.get("/products", (req, res) => {
@@ -27,6 +27,12 @@ app.get("/products", (req, res) => {
 
 app.get("/blog", (req, res) => {
     res.send("<h1>Blogs</h1>"); // phản hồi
+});
+
+app.get("/contact", (req, res) => {
+    res.render("contact.pug", {
+        title: "Trang Liên Hệ"
+    }); // phản hồi
 });
 
 // chạy server với port 3000

@@ -80,4 +80,16 @@
 - <i>`Conditionals: `![Conditionals](./Docs/Images/conditionals.png)</i><br><br>
 - <i>`Case: `![Case](./Docs/Images/case.png)</i><br><br>
 - <i>`Iteration: `![Iteration](./Docs/Images/iteration.png)</i><br><br>
-<hr>
+
+---
+
+### Template Inheritance (kê thừa mẫu)
+
+- <i>Dùng để tạo ra một bộ khung dùng chung cho nhiều trang</i>
+- <i>`Bước 01` ![Bước 01](./Docs/Images/inheritance-01.png)</i><br>
+- <i>`Bước 02` ![Bước 02](./Docs/Images/inheritance-02.png)</i>
+
+---
+
+### Includes
+- <i>Dùng để nhúng nội dung của 1 file PUG vào 1 file PUG khác</i>

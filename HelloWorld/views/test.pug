@@ -1,0 +1,172 @@
+//- cú pháp pug
+html 
+    head 
+        title= title
+        link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/css/style.css")
+    body 
+        img(src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482528LAs/anh-mo-ta.png",alt="")
+
+        h1=  message
+
+        button(class="btn btn-primary") Click me! 
+
+        //- Heading
+        h2 Đây là thẻ h2
+        h3 Đây là thẻ h3
+        h4 Đây là thẻ h4
+        h5 Đây là thẻ h5
+        h6 Đây là thẻ h6
+
+         //- Plan text
+        span Nội dung thẻ span
+
+        p Nội dung thẻ p 
+        p Nội dung thẻ <b> thẻ b </b>
+        p Nội dung thẻ <i> thẻ i </i>
+        p Nội dung thẻ <i> <b> thẻ p </i></b>
+        p 
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            | Ab, delectus? Voluptatibus labore veniam dolore sequi quia deserunt architecto. 
+        p.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ab, delectus? Voluptatibus labore veniam dolore sequi quia deserunt architecto. 
+
+        //- List
+        ul 
+            li Item 01      
+            li Item 02
+            li Item 03
+            li Item 04
+
+        ol 
+            li Item 05
+            li Item 06
+            li Item 07
+            li Item 08
+
+        //- Table
+        table
+            thead 
+                tr 
+                    th Name
+                    th ID
+                    th Signature
+            tbody  
+                tr 
+                    td Vinh
+                    td 04
+                    td Vani
+                tr 
+                    td Anh
+                    td 07
+                    td Azu
+        
+        //- Attributes: Theo 3 cách
+        button.btn.btn-secondary#btn-text Button 01
+        button(class="btn btn-success", id="btn-test") Button 02
+        button(class="btn btn-warning" id="btn-test") Button 03
+        
+        //- Variable
+        - var name = "Phạm Công Vinh";
+        - var id = "220221";
+        - var age = "22";
+        - let grade = "G8";
+        - const pi = "3.14";
+
+        div(class="info d-flex flex-column border-bottom")
+            span(class="fw-bold")= name
+            span(class="fw-bold")= id
+            span(class="fw-bold")= age
+            p(class="fw-bold")= grade
+
+        div(class="info d-flex flex-column")
+            span(class="name") <b>Name:</b> #{name}
+            span(class="ident") <b>ID:</b> #{id}
+            span(class="age") <b>AGE:</b> #{age}
+            p(class="pi") <b>PI:</b> #{pi}
+
+        - let htmlLink = "<a href='https://google.com'>Google</a>";
+        //- in ra theo định dạng chuỗi
+        div(class="link")
+            p= htmlLink
+
+        //- in ra theo định dạng chuỗi
+        div(class="link")
+            p #{htmlLink}
+
+        //- in ra đúng thẻ format là thẻ <a>
+        div(class="link")
+            p !{htmlLink} 
+
+        //- Khai báo Objects
+        - 
+            var user = {
+                name: "Vịt con",
+                tel: "0123456789",
+                age:"20"
+            };
+
+        div(class="info-duck")
+            p Name: #{user.name}
+            p Email: #{user.email}
+
+             //- Conditionals
+            if user.email  
+                p Email: #{user.email}
+            else
+                p Email: Không tồn tại!
+            
+            //- Conditionals - với toán tử 3 ngôi
+            p Email: #{user.email ? user.email : "Không tồn tại!"}
+
+
+        //- Case
+        - var status = "active";
+        case status 
+            when "initial"
+                p <b>Chờ xét duyệt</b>
+            when "active"
+                p <b>Đã kích họat</b>
+            when "block"
+                p <b>Đã bị khóa</b>
+            default 
+                p <b>Không tìm thấy!</b>
+
+        //- Iteration
+        -
+            var listItem = [
+                "Vịt con",
+                "Cún con",
+                "Hươu con",
+                "Cáo con"
+            ];
+
+        ol  
+            each item, idx in listItem 
+                li <b>#{item}</b>, với vị trí thứ #{idx+1} trong mảng
+
+        - var n = 0;
+        ul  
+            while n < 10
+            li= n++
+
+        - var obj = [];
+        ol 
+            each value in obj
+                li  #{value}
+            else 
+                li Không có dữ liệu
+
+        - var values = [];
+        ul
+            each val in values.length ? values : ['There are no values']
+                li #{val}
+        
+        ol 
+            - for(let i=0; i<10; i++)
+                li #{i}
+        
+        //- CDN
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" )
+        script(src="/js/main.js")
