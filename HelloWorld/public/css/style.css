@@ -1,0 +1,14 @@
+table {
+  border: 1px solid #ddd;
+}
+
+thead,
+tr,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+h1 {
+  color: red;
+}
