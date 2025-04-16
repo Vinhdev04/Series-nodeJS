@@ -1,5 +1,9 @@
 //- GỌI HÀM ĐỂ KẾ THỪA LẠI LAYOUT
 extends layout/default.pug
 
-block main 
-    h1 Trang Chủ
+//- nhúng file từ mixin
+include mixins/box.pug
+
+block main
+    //- sử dụng mixin
+    +box("Trang Chủ", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, repellat?")

@@ -1,6 +1,11 @@
 //- GỌI FILE ĐỂ KẾ THỪA LẠI LAYOUT
 extends layout/default.pug
 
+
+//- nhúng file từ mixin
+include mixins/box.pug
+
 //- truyền vào nội dung thay đổi
 block main 
-    h1 Trang Liên Hệ
+    //- sử dụng mixin
+    +box("Trang Liên Hệ", "Lorem ipsum dolor sit ?")
