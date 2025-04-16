@@ -5,13 +5,15 @@ html
         link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css")
         link(rel="stylesheet", href="/css/style.css")
     body 
-        header Header 
-        
+        //- nhúng footer vào từ partials
+        include ../partials/header.pug
+
         //- tạo biến cần thay đổi
         block main 
 
-        footer Footer
-        
+        //- nhúng footer vào từ partials
+        include ../partials/footer.pug
+
         //- CDN
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" )
         script(src="/js/main.js")

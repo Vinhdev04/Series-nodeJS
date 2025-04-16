@@ -92,4 +92,7 @@
 ---
 
 ### Includes
+
 - <i>Dùng để nhúng nội dung của 1 file PUG vào 1 file PUG khác</i>
+- <i>`Bước 01` ![Bước 01](./Docs/Images/include-01.png)</i><br>
+- <i>`Bước 02` ![Bước 02](./Docs/Images/include-02.png)</i>
