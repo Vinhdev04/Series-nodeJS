@@ -39,7 +39,7 @@
 - <b>`Multiple Page Application` là gì?</b>
 - <i>`MPA` là khi người dùng truy cập các `trang con` trên website thì `server` sẽ xử lý và `trả về toàn bộ trang web và nó sẻ bị load mới lại hoàn toàn` </i>
 - <i>Theo hướng Server Side Rendering</i>
-- <i>Ví du: Tiki,Shopee,sendo</i>
+- ## <i>Ví du: Tiki,Shopee,sendo</i>
 - <b>`Single Page Application` là gì?</b>
 - <i>`SPA` là khi người dùng truy cập các `trang con` trên website, `website chỉ load lại những phần giao diện thay đổi, những phần không thay đổi sẻ không bị load lại`</i>
 - <i>Theo hướng Client Side Rendering</i>
@@ -48,6 +48,14 @@
 ---
 
 ### SSR và CSR
+
+- <b>`Server Side Rendering` là gì?</b>
+- <i>HTML đuợc `render` sẵn từ `server` gửi về cho `client`</i>
+- ## <i>Trình duyệt nhận được trang đầy đủ `đã render sẵn`, nhanh cho SEO và giảm thời gian tải ban đầu </i>
+- <b>`Client Side Rendering` là gì?</b>
+- <i>`Server` chỉ gửi `HTML trống + Javascript`</i>
+- <i>`Trình duyệt` sẻ dùng `Javascript` để `render` nội dung sau khi tải xong</i>
+- <i>Trải nghiệm mượt sau lần tải đầu nhưng SEO kém hơn, vì bot không thấy nội dung sẵn.</i>
 
 ---
 
@@ -86,6 +94,8 @@
 ### Template Inheritance (kê thừa mẫu)
 
 - <i>Dùng để tạo ra một bộ khung dùng chung cho nhiều trang</i>
+- <i>Cho phép kế thừa layout từ file khác,</i>
+- <i>override các block nội dung.</i>
 - <i>`Bước 01` ![Bước 01](./Docs/Images/inheritance-01.png)</i><br>
 - <i>`Bước 02` ![Bước 02](./Docs/Images/inheritance-02.png)</i>
 
@@ -94,5 +104,20 @@
 ### Includes
 
 - <i>Dùng để nhúng nội dung của 1 file PUG vào 1 file PUG khác</i>
+- <i>Không hỗ trợ block, không override.</i>
+- <i>Thích hợp cho các phần tử tĩnh, lặp lại như: header, footer, sidebar...</i>
 - <i>`Bước 01` ![Bước 01](./Docs/Images/include-01.png)</i><br>
 - <i>`Bước 02` ![Bước 02](./Docs/Images/include-02.png)</i>
+
+---
+
+### Mixins
+
+- <i>Dùng để tạo ra các khối có thể tái sử dụng</i>
+- <i><b>Bản chất</b>Là việc tự định nghĩa hàm và truyền tham số vào - thông qua gọi hàm để tái sử dụng</i>
+- <i>`Bước 01` ![Bước 01](./Docs/Images/mixin-01.png)</i><br>
+- <i>`Bước 02` ![Bước 02](./Docs/Images/mixin-02.png)</i>
+
+---
+
+###
