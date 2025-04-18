@@ -1,0 +1,21 @@
+
+include mixins/box.pug
+html 
+    head 
+        title= titlePage
+        link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css")
+    body 
+        block main 
+            +box("Danh sách sản phẩm", "Mô tả sản phẩm")
+            
+            //- lấy ra dữ liệu từ database thông qua products
+            ul(class="list-unstyled")
+                //- giống for of() -> lặp qua từng phần tử của 1 Array
+                each item,idx in products 
+                    div(class="border px-3 py-3 bg-light w-50") 
+                        h4(class="text-primary fw-bold") #{item.title} 
+                        li(class="text-secondary") #{item.description}
+                        <img src= "#{item.thumbnail}"/>
+        
+
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" )

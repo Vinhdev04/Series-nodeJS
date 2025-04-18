@@ -316,3 +316,22 @@ Trước khi học series, bạn nên có kiến thức cơ bản về:
 **Schema**
 
 - <i>Trong khi Mongo là `schema-less`, SQL định nghĩa một lược đồ thông qua định nghĩa bảng. Một lược đồ Mongoose là một lớp cấu trúc dữ liệu được thi hành qua lớp ứng dụng.</i>
+
+---
+
+### Kết nối NodeJS với MongoDB
+
+**Ví dụ**
+
+- <i>`Bước 1: ` kết nối tới mongoose, tạo cấu trúc truy vấn - kết nối tới database </i><br>
+
+  ![ kết nối tới mongoose, tạo cấu trúc truy vấn - kết nối tới database](./Docs/Images/ex-00.png)
+
+- <i>`Buớc 2: ` lấy data từ product </i><br>
+  ![lấy data từ product](./Docs/Images/ex-01.png)
+
+- <i>`Bước 3: ` Tạo file product.pug</i><br>
+  ![Tạo file product.pug](./Docs/Images/ex-02.png)<br>
+  **Lưu ý: tên biến thay đôi tùy ý (đúng cú pháp)**
+
+---

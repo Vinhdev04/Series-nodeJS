@@ -21,9 +21,6 @@ app.get("/", (req, res) => {
     });
 });
 
-app.get("/products", (req, res) => {
-    res.send("<h1>Products</h1>"); // phản hồi
-});
 
 app.get("/blog", (req, res) => {
     res.send("<h1>Blogs</h1>"); // phản hồi
@@ -40,3 +37,37 @@ app.listen(port, () => {
     console.log(`Port ${port} is starting... `); // log ra port
     console.log(`http://localhost:${port}`); // log ra địa chỉ localhost
 });
+
+// --------------------- Buổi 03 ---------------------
+// kết nối tới mongoose
+const mongoose = require('mongoose');
+main().catch(err => console.log(err));
+async function main() {
+    await mongoose.connect("mongodb://localhost:27017/product-test");
+}
+
+// tạo cấu trúc truy vấn - kết nối tới database
+const Product = mongoose.model("Product", {
+    title: String,
+    description: String,
+    thumbnail: String
+})
+
+// lấy data từ product
+app.get("/products", async (req, res) => {
+    // find({}) -> truy vấn lấy ra dữ liệu bảng trong database
+    const products = await Product.find({});
+    console.log(products);
+
+    // find({_id:""}) -> truy vấn lấy ra phần tử có id:""
+    const products01 = await Product.find({_id:"680257b1dc98c93970a5b6c0"});
+    console.log(products);
+
+
+    res.render("product.pug", {
+        titlePage: "Trang Sản Phẩm",
+        products: products // truyền mảng products
+
+    })
+});
+
