@@ -46,7 +46,7 @@ async function main() {
     await mongoose.connect("mongodb://localhost:27017/product-test");
 }
 
-// tạo cấu trúc truy vấn - kết nối tới database
+// tạo cấu trúc truy vấn (schema) - kết nối tới database
 const Product = mongoose.model("Product", {
     title: String,
     description: String,

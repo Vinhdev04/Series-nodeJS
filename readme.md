@@ -54,8 +54,6 @@ Chào mừng bạn đến với **series học Node.js**! Đây là chuỗi bài
 
 ---
 
-## 🎯 Dự án series này
-
 ---
 
 ## 📌 Yêu cầu kiến thức nền
@@ -85,6 +83,14 @@ Trước khi học series, bạn nên có kiến thức cơ bản về:
 - VSCode + tiện ích ESLint, Prettier
 
 ---
+
+## 🧪 Dự án cuối khóa - Node.js
+
+### 📌 Tên dự án: `<!-- điền tên dự án ở đây -->`
+
+### 📂 Cấu trúc thư mục gợi ý
+
+### ⚙️ Chức năng chính
 
 ## ❤️ Cảm ơn bạn đã theo dõi!
 
@@ -335,3 +341,17 @@ Trước khi học series, bạn nên có kiến thức cơ bản về:
   **Lưu ý: tên biến thay đôi tùy ý (đúng cú pháp)**
 
 ---
+
+### Mô hình MVC(Model-View-Controller)
+
+- ![Mô hình MVC](./Docs/Images/mvc-04.webp)
+
+- <i>`Model(Mô hình):` Dùng để kết nối với datbase</i>
+- <i>`View(Xem):` Giao diện người dùng</i>
+- <i>`Controller(Điều khiển):` Dùng để liên kết Model với View</i><br><br>
+  ![Mô hình MVC](./Docs/Images/mvc-03.png)
+
+- <i>`Mô tả` Cơ chế họat động</i><br><br>
+  ![Mô hình MVC-GIF](./Docs/Images/mvc-02.gif)<br>
+
+  ![Mô hình MVC](./Docs/Images/mvc-01.png)
