@@ -1,3 +1,93 @@
+# 🚀 Series Học Node.js Từ A đến Z
+
+- <b>Author: `@Vinhdev04`</b>
+  <br>
+  ![Node.js Banner](https://nodejs.org/static/images/logo.svg)
+  <br><br>
+  > Học Node.js bài bản, dễ hiểu và thực chiến 🚀 – dành cho người mới bắt đầu đến khi làm được dự án thật!
+  > <br> <br>![Node Server](./Docs/Images/ezgif-3-91584f5b82b9.gif)
+
+---
+
+## 📚 Giới thiệu Series
+
+![Node Server](./Docs/Images/Nodejs-Architecture-1200x675.png)
+Chào mừng bạn đến với **series học Node.js**! Đây là chuỗi bài học được xây dựng nhằm giúp bạn:
+
+- Hiểu rõ về **Node.js là gì**, vì sao nên học nó
+- Làm quen với các khái niệm **core modules**: `http`, `fs`, `path`, `events`, ...
+- Xây dựng **RESTful API** với `Express.js`
+- Kết nối với cơ sở dữ liệu như **MongoDB**, **MySQL**
+- Deploy project thực tế
+
+> 👨‍💻 Không chỉ lý thuyết, bạn sẽ được **code thực tế** và làm **dự án nhỏ** để ôn lại kiến thức.
+
+---
+
+## 🧱 Cấu trúc nội dung
+
+| STT | Chủ đề             | Nội dung chính                             |
+| --- | ------------------ | ------------------------------------------ |
+| 1️⃣  | Giới thiệu Node.js | Cài đặt, Hello World, mô hình event-driven |
+| 2️⃣  | Modules & Packages | Exports, Imports, npm, tạo module riêng    |
+| 3️⃣  | File System        | Đọc/ghi file, đồng bộ & bất đồng bộ        |
+| 4️⃣  | HTTP Module        | Tạo web server, xử lý request/response     |
+| 5️⃣  | Express.js         | Middleware, routes, controller             |
+| 6️⃣  | MongoDB            | Kết nối database, CRUD cơ bản              |
+| 7️⃣  | Dự án mini         | API quản lý user hoặc blog đơn giản        |
+| 8️⃣  | Deploy             | Đưa code lên hosting/VPS                   |
+
+---
+
+## 🎯 Mục tiêu sau series này
+
+- ✅ Hiểu rõ cách hoạt động của Node.js
+- ✅ Tự tin xây dựng API với Express
+- ✅ Biết deploy project cơ bản
+- ✅ Là nền tảng vững chắc để học thêm: `NestJS`, `GraphQL`, `WebSocket`, v.v.
+
+---
+
+### Minh họa hoạt động server đơn giản
+
+![Node Server](./Docs/Images/R.gif)
+
+---
+
+## 📌 Yêu cầu kiến thức nền
+
+Trước khi học series, bạn nên có kiến thức cơ bản về:
+
+- HTML / CSS / JavaScript (ES6+)
+- Làm việc với Terminal / Command Line
+- Biết dùng Git và VSCode là một lợi thế
+
+---
+
+## 💡 Mẹo học hiệu quả
+
+- 📓 Ghi chú lại những gì bạn hiểu, đừng chỉ copy code
+- ❓ Đặt câu hỏi nếu chưa hiểu
+- 🔁 Xem lại các bài cũ sau 2–3 ngày
+- 🧪 Thử nghiệm thêm với các ví dụ ngoài bài giảng
+
+---
+
+## 🛠 Công cụ hỗ trợ
+
+- Node.js v18+
+- Postman / Thunder Client
+- MongoDB Atlas (hoặc Mongo Compass)
+- VSCode + tiện ích ESLint, Prettier
+
+---
+
+## ❤️ Cảm ơn bạn đã theo dõi!
+
+> Nếu thấy series hữu ích, hãy ⭐ repo này và chia sẻ cho bạn bè nhé!
+
+<br>
+
 ### ExpressJS
 
 - <i>`ExpressJS` là một framework đê xây dựng các ứng dụng website trong `NodeJS`</i>
