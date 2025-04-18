@@ -54,6 +54,10 @@ Chào mừng bạn đến với **series học Node.js**! Đây là chuỗi bài
 
 ---
 
+## 🎯 Dự án series này
+
+---
+
 ## 📌 Yêu cầu kiến thức nền
 
 Trước khi học series, bạn nên có kiến thức cơ bản về:
@@ -210,4 +214,105 @@ Trước khi học series, bạn nên có kiến thức cơ bản về:
 
 ---
 
-###
+### Giới thiệu dự án thực tế
+
+- <b>`Trang phía người dùng (client)`</b>
+- <b>`Trang phía quản trị viên (admin)`</b>
+
+---
+
+### Tìm hiểu kiến thức cơ bản MongoDB
+
+![MongoDB](./Docs/Images/mongo.webp)
+
+- <i>`MongoDB` là `cơ sở dữ liệu` được thiết kê theo hướng `đối tượng`</i>
+- <i>`MongoDB` là một cơ sở dữ liệu `NoSQL`</i>
+- <i>Mô hình: `Database - Collection - Document`</i>
+- <i>Download: `https://www.mongodb.com/try/download/community`</i>
+- <b>Lưu ý: Trong lúc cài mongoDB `cài thêm MongoDB Compass` -> phần mềm để quản lý `database` có giao diện trực quan</b><br><br>
+  ![Tạo database từ MongoDB](./Docs/Images/mongoDB.png)
+
+---
+
+### Kiến thức về MongoDB
+
+#### NoSql(cơ sở dữ liệu phi quan hệ ) là gì?
+
+- <i>`NoSQL` là 1 dạng `CSDL` mã nguồn mở: `Non-Relational SQL hay còn gọi Not-Only SQL`</i>
+- <i>`NoSQL` được phát triên dựa trên `Javascript Framework` với kiểu dữ liệu là `JSON (Key-Value)`</i>
+- <i>`NoSQL` ra đời nhằm khắc phục khuyết điểm và thiếu xót của `mô hình dữ liệu quan hệ RDBMS (Relational Database Management System- Hê Quản Tri Cơ Sở Dữ Liệu)` vê tốc độ ,tính năng và khả năng mở rộng,...</i>
+- <i>`NoSQL` bỏ qua tính toàn vẹn của dữ liệu và transaction để đổi lấy hiệu suất nhanh và khả năng mở rộng.</i>
+- <i>`NoSQL` bạn có thể mở rộng dữ liệu mà không lo tới những việc như tạo khóa ngoại, khóa chính, kiểm tra ràng buộc .v.v ...</i><br><br>
+
+---
+
+![Thao tác vơi MongoDB](./Docs/Images/crud-mongo.png)
+
+- <b>`Tạo csdl`: use test </b>
+- <b>`Tạo bảng`: db.createCollection('')</b>
+- <b>`Tạo bản ghi`: db.table\_\_name.insert({key:'value'})</b>
+- <b>`Cập nhật`: db.table\_\_name.updated({key:'value'})</b>
+- <b>`Xóa bản ghi`: db.table\_\_name.remove({\_id})</b>
+- <b>`Tìm kiếm all`: db.table\_\_name.find({})</b>
+- <b>`Tìm kiếm`: db.table\_\_name.find({name: 'A'})</b>
+
+---
+
+#### MongoDB là gì?
+
+- <i>`MongoDB` là một hệ quản trị cơ sở dữ liệu mã nguồn mở, là CSDL thuộc NoSql và được hàng triệu người sử dụng.</i>
+- <i>Với CSDL quan hệ chúng ta có khái niệm bảng, các cơ sở dữ liệu quan hệ (như MySQL hay SQL Server...) sử dụng các bảng để lưu dữ liệu thì với `MongoDB` chúng ta sẽ `dùng khái niệm` là `collection` thay vì bảng</i>
+- <i>So với RDBMS thì trong `MongoDB collection ứng với table`, còn `document sẽ ứng với row` , `MongoDB sẽ dùng các document thay cho row` trong RDBMS.</i>
+
+---
+
+#### Ưu điểm của mongoDB
+
+- <i>linh hoạt trong việc lưu trữ dữ liệu, nên bạn muốn gì thì cứ insert vào thoải mái</i>
+- <i>xóa hay update nó không cần phải mất thời gian kiểm tra xem có thỏa mãn các ràng buộc dữ liệu như trong RDBMS.</i>
+- <i>Khi có một truy vấn dữ liệu, bản ghi được cached lên bộ nhớ Ram, để phục vụ lượt truy vấn sau diễn ra nhanh hơn mà không cần phải đọc từ ổ cứng.</i>
+- <i>Hiệu năng cao: Tốc độ truy vấn (find, update, insert, delete) của MongoDB nhanh hơn hẳn so với các hệ quản trị cơ sở dữ liệu quan hệ (RDBMS).</i><br><br>
+  ![MongoDB có thể nhanh tới gấp 100 lần so với MySQL](./Docs/Images/compare.jpg)
+
+---
+
+#### Nhuợc điểm của mongoDB
+
+- <i>MongoDB không có các tính chất ràng buộc như trong RDBMS nên khi thao tác với mongoDB thì phải hết sức cẩn thận.</i>
+- <i>Tốn bộ nhớ do dữ liệu lưu dưới dạng key-value, các collection chỉ khác về value do đó key sẽ bị lặp lại. Không hỗ trợ join nên dễ bị dữ thừa dữ liệu.</i>
+- <i>Khi insert/update/remove bản ghi, MongoDB sẽ chưa cập nhật ngay xuống ổ cứng, mà sau 60 giây MongoDB mới thực hiện ghi toàn bộ dữ liệu thay đổi từ RAM xuống ổ cứng điêù này sẽ là nhược điểm vì sẽ có nguy cơ bị mất dữ liệu khi xảy ra các tình huống như mất điện...</i>
+
+### Tìm hiểu kiến thức cơ bản Mongoose
+
+- <i>`Mongoose` là một thư viện `Object Data Modeling (ODM)`</i>
+- <i>Thư viện `mô hình hóa dư liệu đối tượng cho MongoDB`</i>
+- <i>`Mongoose` cho phép định nghĩa các Object với một `schema` được định nghĩa rõ ràng,được ánh xạ tới một MongoDB document</i>
+- <i>Download: `npm i mongoose`</i><br><br>
+  ![Mongoose](./Docs/Images/mongoose.png)<br><br>
+  ![Mongoose](./Docs/Images/compare02.png)<br><br>
+
+---
+
+#### Thuật ngữ - Terminologies
+
+**Collections**
+
+- <i>`Collections` ở Mongo tương đương với các bảng trong các cơ sở dữ liệu quan hệ. Chúng có thể chứa nhiều tài liệu JSON.</i>
+
+---
+
+**Documents**
+
+- <i>`Documents` tương đương với các bản ghi trong SQL. Mặc dù một dòng SQL có thể tham khảo dữ liệu trong các bảng khác, các tài liệu Mongo thường kết hợp trong một tài liệu.</i>
+
+---
+
+**Fields**
+
+- <i>`Fields` thuộc tính tương tự như các cột trong một bảng SQL.</i>
+
+---
+
+**Schema**
+
+- <i>Trong khi Mongo là `schema-less`, SQL định nghĩa một lược đồ thông qua định nghĩa bảng. Một lược đồ Mongoose là một lớp cấu trúc dữ liệu được thi hành qua lớp ứng dụng.</i>
