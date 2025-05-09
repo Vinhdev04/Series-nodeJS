@@ -4,6 +4,7 @@ const port = 3001; // port 3001
 
 // sử dụng pug làm view engine
 app.set("views", "./views");
+
 // import pug
 app.set("view engine", "pug");
 
